@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Document(collection="Account")
 public class Account {
- //properties
+ 
 	@Id
 	private int account_id;
 	private String first_name;
