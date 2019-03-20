@@ -7,7 +7,7 @@ node
    	    
    stage ('build stage')
    		{
-   			sh 'mvn clean install'
+   			sh 'mvn package'
    		}
    		
    
