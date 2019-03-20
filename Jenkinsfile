@@ -5,14 +5,9 @@ node
    			checkout scm    
    	    } 
    	    
-   stage(' Compile Stage ') 
-  	    {
-  			 sh 'mvn clean compile'
-  	    }
-   	    
    stage ('build stage')
    		{
-   			sh 'mvn install'
+   			sh 'mvn clean install'
    		}
    		
    
