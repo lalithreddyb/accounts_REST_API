@@ -7,7 +7,7 @@ node
    	    
    stage ('build stage')
    		{
-   			sh 'mvn package'
+   			sh '/opt/apache-maven-3.6.0/bin/mvn install'
    		}
    		
    
