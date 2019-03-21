@@ -14,7 +14,7 @@ node
    stage('Build Image')
   	    {        
   			  sh 'sudo docker build -t lalithreddyb/accounts_mongo:${BUILD_NUMBER} .'   
-  			  sh 'docker tag lalithreddyb/accounts_mongo:${BUILD_NUMBER} lalithreddyb/accounts_mongo:latest'   
+  			  sh 'docker tag lalithreddyb/accounts_mongo:${BUILD_NUMBER} latest'   
   	    }  
   stage('Push Image')
   		{         
