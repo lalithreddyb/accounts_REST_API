@@ -14,13 +14,12 @@ node
    stage('Build Image')
   	    {        
   			  sh 'sudo docker build -t lalithreddyb/accounts_mongo:${BUILD_NUMBER} .'   
-  			  //sh 'docker tag lalithreddyb/accounts_mongo:${BUILD_NUMBER} 012515449968.dkr.ecr.us-east-1.amazonaws.com/lalith_mongo:latest'   
+  			  sh 'docker tag lalithreddyb/accounts_mongo:${BUILD_NUMBER} idexcelinterns/lalith:latest'   
   	    }  
   stage('Push Image')
   		{  
-        sh' docker.withRegistry('https:012515449968.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:aws-credentials') 
-        {
-           docker.image('lalithreddyb/accounts_mongo:${BUILD_NUMBER}').push('latest')} '
+        sh 'docker login -u idexcelinterns -p kutty170065'        
+         sh 'docker push idexcelinterns/lalith:latest'
  		}
   }
 
