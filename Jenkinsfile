@@ -18,7 +18,7 @@ node
   	    }  
   stage('Push Image')
   		{  
-        sh' docker.withRegistry('https://012515449968.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:aws-credentials') 
+        sh' docker.withRegistry('https:012515449968.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:aws-credentials') 
         {
            docker.image('lalithreddyb/accounts_mongo:${BUILD_NUMBER}').push('latest')} '
  		}
