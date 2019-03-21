@@ -19,6 +19,7 @@ node
   stage('Push Image')
   		{         
  			sh 'aws ecr get-login --no-include-email --region us-east-1'
+         sh 'docker login -u lalith.bheemavarapu -p lalith@143'
  			 sh 'docker push 012515449968.dkr.ecr.us-east-1.amazonaws.com/lalith_mongo:latest'  
  		}
   }
