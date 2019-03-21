@@ -14,12 +14,12 @@ node
    stage('Build Image')
   	    {        
   			  sh 'sudo docker build -t lalithreddyb/accounts_mongo:${BUILD_NUMBER} .'   
-  			  sh 'docker tag lalithreddyb/accounts_mongo:${BUILD_NUMBER} lalithreddyb/accounts_mongo:lalith'   
+  			  sh 'docker tag lalithreddyb/accounts_mongo:${BUILD_NUMBER} lalithreddyb/accounts:latest'   
   	    }  
   stage('Push Image')
   		{         
  			 sh 'docker login docker.io -u lalithreddy -p Lalith@143'
- 			 sh 'docker push docker.io/lalithreddyb/accounts_mongo:lalith'  
+ 			 sh 'docker push docker.io/lalithreddyb/accounts:latest'  
  		}
   }
 
