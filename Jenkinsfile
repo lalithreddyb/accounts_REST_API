@@ -13,13 +13,13 @@ node
    
    stage('Build Image')
   	    {        
-  			  sh 'sudo docker build -t lalithreddyb/AccountsRESTAPI:${BUILD_NUMBER} .'   
-  			  sh 'docker tag lalithreddyb/AccountsRESTAPI:${BUILD_NUMBER} lalithreddyb/AccountsRESTAPI:latest'   
+  			  sh 'sudo docker build -t lalithreddyb/accounts_mongo:${BUILD_NUMBER} .'   
+  			  sh 'docker tag lalithreddyb/accounts_mongo:${BUILD_NUMBER} lalithreddyb/accounts_mongo:latest'   
   	    }  
   stage('Push Image')
   		{         
  			 sh 'docker login -u lalithreddy -p lalith@143'    
- 			 sh 'docker push lalithreddyb/AccountsRESTAPI:latest'  
+ 			 sh 'docker push lalithreddyb/accounts_mongo:latest'  
  		}
   }
 
