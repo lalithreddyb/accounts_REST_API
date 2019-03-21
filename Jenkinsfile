@@ -19,7 +19,7 @@ node
   stage('Push Image')
   		{         
  			 sh 'docker login -u lalithreddy -p Lalith@143'    
- 			 sh 'docker push lalithreddyb/lalith:latest'  
+ 			 sh 'docker push lalithreddyb/accounts_mongo:latest'  
  		}
   }
 
